@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  <ul class="post-list">
+    {{- range .Pages.ByTitle }}
+      <li>
+        <time>{{ len .Pages }} post{{ if ne (len .Pages) 1 }}s{{ end }}</time>
+        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+      </li>
+    {{- end }}
+  </ul>
+{{ end }}

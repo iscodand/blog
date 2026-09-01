@@ -30,3 +30,9 @@ go.work.sum
 # Editor/IDE
 # .idea/
 # .vscode/
+
+# Hugo
+public/
+resources/
+.hugo_build.lock
+.DS_Store

@@ -1,0 +1,19 @@
+{{ define "main" }}
+  <section class="intro">
+    {{ .Content }}
+    <ul class="links">
+      {{- with site.Params.github }}<li><a href="{{ . }}" rel="noreferrer noopener">github</a></li>{{ end }}
+      {{- with site.Params.linkedin }}<li><a href="{{ . }}" rel="noreferrer noopener">linkedin</a></li>{{ end }}
+      <li><a href="{{ "/index.xml" | relURL }}">rss</a></li>
+    </ul>
+  </section>
+
+  {{- $posts := where site.RegularPages "Section" "posts" }}
+  {{- with $posts }}
+    <h2>Posts</h2>
+    {{ partial "post-list.html" (first (default 5 site.Params.homePostCount) .) }}
+    {{- if gt (len .) (int (default 5 site.Params.homePostCount)) }}
+      <p class="more"><a href="{{ "/posts/" | relURL }}">all posts →</a></p>
+    {{- end }}
+  {{- end }}
+{{ end }}

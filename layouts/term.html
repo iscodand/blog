@@ -1,0 +1,6 @@
+{{ define "main" }}
+  <h1>#{{ .Title }}</h1>
+  {{ .Content }}
+  {{ partial "post-list.html" .Pages }}
+  <p class="more"><a href="{{ "/tags/" | relURL }}">← all tags</a></p>
+{{ end }}

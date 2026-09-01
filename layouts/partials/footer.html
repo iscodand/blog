@@ -1,0 +1,5 @@
+<footer class="site-footer">
+  © {{ now.Format "2006" }} {{ site.Params.author }}
+  {{- with .OutputFormats.Get "rss" }}<span class="sep">·</span><a href="{{ "/index.xml" | relURL }}">rss</a>{{ end }}
+  {{- with site.Params.source }}<span class="sep">·</span><a href="{{ . }}" rel="noreferrer noopener">source</a>{{ end }}
+</footer>
