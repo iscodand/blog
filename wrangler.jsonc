@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "blog",
+  "compatibility_date": "2026-08-31",
+  // Site estático: nenhum script de Worker, só os arquivos que o Hugo gera.
+  "assets": {
+    "directory": "./public",
+    // /posts/ -> /posts/index.html, e redireciona /posts para /posts/
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
