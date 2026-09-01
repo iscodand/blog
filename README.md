@@ -56,7 +56,22 @@ content/
 static/favicon.svg
 ```
 
-## Before publishing
+## Deploy
 
-Set `baseURL` in `hugo.toml` to the real domain (it's `https://example.com/` for now),
-and fill in `[params]` — `author`, `description`, `github`, `linkedin`, `source`.
+Hosted on Cloudflare Pages, deployed on every push to `main`.
+
+Build settings in the Cloudflare dashboard:
+
+| Setting                | Value              |
+| ---------------------- | ------------------ |
+| Framework preset       | Hugo               |
+| Build command          | `hugo --gc --minify` |
+| Build output directory | `public`           |
+| Environment variable   | `HUGO_VERSION` = `0.165.0` |
+
+Custom domain: `me.iscodandrade.dev`. DNS lives at Hostinger — a `CNAME` record
+points the subdomain at the `.pages.dev` hostname of the project. Cloudflare
+issues the TLS certificate automatically.
+
+`baseURL` in `hugo.toml` must match the custom domain, otherwise canonical URLs,
+the sitemap and the RSS feed will point at the wrong host.
