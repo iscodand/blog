@@ -1,4 +1,10 @@
-# How Bruno changed my API tests workflow
+---
+title: "How Bruno changed my API tests workflow"
+date: 2026-11-10T12:00:00-03:00
+draft: false
+summary: "How my team ditched a messy shared Postman collection for Bruno, with tests living in the repo and running on GitLab CI."
+tags: ["bruno", "testing", "api", "ci-cd"]
+---
 
 So, I started my career as a QA engineer, so I know a little bit about test cases, test suites and all that stuff.
 
