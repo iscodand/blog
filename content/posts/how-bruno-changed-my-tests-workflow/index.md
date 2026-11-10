@@ -12,6 +12,8 @@ The fun part is automating tests, using BDD, Selenium, Cypress or whatever.
 
 But I always hated Postman. That interface, the way you automate tests there... it really sucks.
 
+![Postman logo](postman-logo.svg)
+
 ## The mess we had
 
 Basically, we have a few APIs under development on my team, and these APIs are deployed using CI/CD on GitLab.
@@ -22,6 +24,8 @@ So we started using Postman, BUT Postman has a limit on how many users you can h
 
 And then (thank you, Josh and Kennedy from my SmartX team) I learned about BRUNO (such a good name), and brooooo, it was a real game changer.
 
+![Bruno logo](bruno-logo.svg)
+
 ## Why Bruno?
 
 Bruno does basically the same stuff that Postman does, but BETTER: it's lighter, faster and prettier (and the logo is a lot better as well).
@@ -31,6 +35,8 @@ You can basically add your test suite to your repository and run the tests in yo
 And you can run only the suite that you wanna run, pass environment variables and choose the environment as well.
 
 ## What a test looks like
+
+![A request open in the Bruno app](bruno-app.png)
 
 This is an example of a test that you can write:
 
@@ -135,6 +141,8 @@ api-tests:
 ```
 
 The `junit` report makes GitLab show the test results right in the pipeline and in the merge request, so you can see which request failed without digging into the logs.
+
+![Bruno test results in the GitLab pipeline tests tab](gitlab-test-report.png)
 
 Also, Bruno has a lot more cool stuff, such as MOCKS, which you can use to mock the data of an API (it's better than waiting for your team to build the entire API), and you can run all of this in your CI/CD FOR FREE.
 
