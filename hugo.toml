@@ -1,6 +1,6 @@
 baseURL = "https://me.iscodandrade.dev/"
 locale = "en-US"
-title = "isco d'andrade"
+title = "iscodandrade"
 enableRobotsTXT = true
 capitalizeListTitles = false
 
